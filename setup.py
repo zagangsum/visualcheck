@@ -1,12 +1,19 @@
-from distutils.core import setup
+#!/usr/bin/env python
+# -*-* coing: UTF-8 -*-
+
+from setuptools import setup
 
 setup(
     name='Visual Check',
     version='1',
-    packages=[''],
+    packages=['Visual Check'],
     url='www.zagangsum.com',
-    license='',
+    license='GNU General Public License',
     author='gareth.cripps',
-    author_email='gaz@g7wjw.co.uk',
-    description='Production line visual standards'
+    author_email='gareth.cripps@zagangsum.com',
+    description='Production line visual standards',
+    platforms='any',
+    install_requires=[
+        'pillow', 'APscheduler',
+    ]
 )

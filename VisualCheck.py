@@ -1,14 +1,16 @@
 __author__ = 'gareth.cripps'
-from Tkinter import *
-from PIL import Image, ImageTk
 import time
+from Tkinter import *
+
+from PIL import Image, ImageTk
+
 global run_at
 global delay
 from datetime import datetime
 
 global fName
+fName = 'Hovis.jpg'
 global flist
-fName = "Hovis.jpg"
 global xsize
 global ysize
 global buttext
@@ -17,23 +19,17 @@ global localFileList
 global currButSet
 global butYpos
 global butitems
-xsize = 1366
-ysize = 767
-buttext = []
-flist = []
-remoteFileList = []
-ftpFileList = []
+
 LineID ="Line 1"
 global firstRun
-import sys, os
+import os
 firstRun = 1
-#import time
-#import os
 
 from apscheduler.schedulers.background import BackgroundScheduler
 
 class App(Frame):
     def __init__(self, master):
+
         self.tk = Tk()
         self.frame = Frame(self.tk)
         self.frame.pack()
@@ -298,81 +294,6 @@ def parse_files():
             currButSet = 0
             firstRun = 0
             app.change_buttons_next(currButSet)
-
-def destroy_buttons(butsettodestroy):
-        #butsettodestroy = currButSet
-        if firstRun != 1:
-            if butsettodestroy == 0:
-                if butitems > 0:
-                    button1.destroy()
-                if butitems > 1:
-                    button2.place_destroy()
-                if butitems > 2:
-                    button3.place_destroy()
-                if butitems > 3:
-                    button4.place_destroy()
-                if butitems > 4:
-                    button5.place_destroy()
-                if butitems > 5:
-                    button6.place_destroy()
-                if butitems > 6:
-                    button7.place_destroy()
-                if butitems > 7:
-                    button8.place_destroy()
-                if butitems > 8:
-                    button9.place_destroy()
-                if butitems > 9:
-                    button10.place_destroy()
-                    buttonNext.place_destroy()
-
-            elif butsettodestroy == 1:
-                buttonBack.place_destroy()
-                if butitems > 10:
-                    button11.place_destroy()
-                if butitems > 11:
-                    button12.place_destroy()
-                if butitems > 12:
-                    button13.place_destroy()
-                if butitems > 13:
-                    button14.place_destroy()
-                if butitems > 14:
-                    button15.place_destroy()
-                if butitems > 15:
-                    button16.place_destroy()
-                if butitems > 16:
-                    button17.place_destroy()
-                if butitems > 17:
-                    button18.place_destroy()
-                if butitems > 18:
-                    button19.place_destroy()
-                if butitems > 19:
-                    button20.place_destroy()
-                    buttonNext.place_destroy()
-
-            elif butsettodestroy == 2:
-                buttonBack.place_destroy()
-                if butitems > 20:
-                    button21.place_destroy()
-                if butitems > 21:
-                    button22.place_destroy()
-                if butitems > 22:
-                    button23.place_destroy()
-                if butitems > 23:
-                    button24.place_destroy()
-                if butitems > 24:
-                    button25.place_destroy()
-                if butitems > 25:
-                    button26.place_destroy()
-                if butitems > 26:
-                    button27.place_destroy()
-                if butitems > 27:
-                    button28.place_destroy()
-                if butitems > 28:
-                    button29.place_destroy()
-                if butitems > 29:
-                    button30.place_destroy()
-                    buttonNext.place_destroy()
-                return
 
 
 def training_matrix():
